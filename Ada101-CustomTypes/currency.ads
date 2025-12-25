@@ -2,6 +2,8 @@ package Currency is
    type EUR is new Float;
    type USD is new Float;
 
+   procedure Set_Exchange_Rate(USD_Per_EUR : Float);
+
    function to_USD (Amount : EUR) return USD;
    function to_EUR (Amount : USD) return EUR;
    
