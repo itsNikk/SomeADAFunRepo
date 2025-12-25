@@ -10,7 +10,13 @@ procedure customTypes is
    Total : EUR;
 begin
    Total := Account_EUR + to_EUR(Account_USD);
-
-   Put(Float(Total), Fore=>1,Aft=>2,Exp => 0);
+   Put(Float(Total), Fore => 1,Aft => 2,Exp => 0);
    Put(" EUR");
+
+   Set_Exchange_Rate(1.25);
+   Total := Account_EUR + to_EUR(Account_USD);
+   New_Line;
+   Put(Float(Total), Fore => 1,Aft => 2,Exp => 0);
+   Put(" EUR");
+
 end customTypes;
